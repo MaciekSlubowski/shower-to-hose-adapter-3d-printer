@@ -5,17 +5,12 @@ Written in OpenSCAD, this parametric model features an ergonomic cross handle (f
 
 ## 📷 Gallery
 
-![OpenSCAD 3D Render](https://github.com/user-attachments/assets/7030083c-0ead-4226-9a18-7266c420a5d3)
-* **0.png:** 3D render of the parametric model generated in OpenSCAD.
-
-![Top view of printed adapter](https://github.com/user-attachments/assets/ac728592-f4fe-4934-a048-81ec9e81e212)
-* **1.jpg:** Printed adapter standing vertically, showcasing the thick-walled internal bore and robust cross handle.
-
-![Side profile of printed adapter](https://github.com/user-attachments/assets/76f716e1-ab44-4eb6-bd99-48b51e16c518)
-* **2.jpg:** Side profile displaying the central hub, hose barb teeth, and the G 1/2" thread base.
-
-![Adapter assembled with hoses](https://github.com/user-attachments/assets/e27f68fd-4c2c-4fba-ba3c-27b35c408714)
-* **3.jpg:** Fully assembled system in action—the adapter is screwed into a metal shower hose fitting and secured to a flexible hose with a metal worm-drive clamp.
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/7030083c-0ead-4226-9a18-7266c420a5d3" height="250" alt="OpenSCAD 3D Render" title="OpenSCAD 3D Render" />
+  <img src="https://github.com/user-attachments/assets/ac728592-f4fe-4934-a048-81ec9e81e212" height="250" alt="Top view of printed adapter" title="Top view of printed adapter" />
+  <img src="https://github.com/user-attachments/assets/76f716e1-ab44-4eb6-bd99-48b51e16c518" height="250" alt="Side profile of printed adapter" title="Side profile of printed adapter" />
+  <img src="https://github.com/user-attachments/assets/e27f68fd-4c2c-4fba-ba3c-27b35c408714" height="250" alt="Adapter assembled with hoses" title="Adapter assembled with hoses" />
+</p>
 
 ## 📏 Default Dimensions
 
