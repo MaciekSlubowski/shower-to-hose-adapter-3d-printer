@@ -29,8 +29,7 @@ Based on the default parameters in the OpenSCAD file, the generated adapter has 
 
 * **Fully Parametric:** Easily adjust hose diameter, thread clearance, and wall thickness directly in the OpenSCAD file to fit your specific setup.
 * **Heavy-Duty Walls:** The internal bore is narrowed to create a thick, pressure-resistant structure. It will not crack or crush under the heavy tension of a metal worm-drive hose clamp.
-* **Support-Free Design:** By orienting the thread flat on the build plate, the handle chamfers and barb teeth print perfectly without any supports.
-
+  
 ## 🖨️ Recommended Print Settings
 
 To ensure the adapter is watertight and withstands mains water pressure without delaminating, follow these guidelines:
