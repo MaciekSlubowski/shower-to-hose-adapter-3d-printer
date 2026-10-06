@@ -15,7 +15,7 @@ Written in OpenSCAD, this parametric model features an ergonomic cross handle (f
 * **OpenSCAD Render:** 3D visualization of the generated parametric model.
 * **Top View:** Printed adapter standing vertically, showcasing the thick-walled internal bore and robust cross handle.
 * **Side Profile:** Central hub, hose barb teeth, and the G 1/2" thread base.
-* **Assembled System:** The adapter screwed into a metal shower hose fitting and secured to a flexible hose with a metal worm-drive clamp.
+* **Assembled System:** The adapter screwed into a metal shower hose fitting and secured to a flexible hose worm-drive clamp.
 
 ## 📏 Default Dimensions
 
