@@ -66,4 +66,4 @@ FDM plastics tend to shrink slightly after printing and cooling down. To compens
 > **Pro-Tip for Assembly:** Before sliding your hose onto the printed barb, dip the end of the hose in boiling water for 30 seconds. The heat will soften the rubber/PVC, allowing it to glide over the scaled-up teeth easily. Once it cools, it will shrink-fit tightly around the printed part. Secure it with a metal hose clamp for a permanent, leak-proof connection.
 
 ---
-*This project is open-source and provided strictly for personal, educational, and non-commercial purposes. You are free to explore, modify, and learn from the codebase. If you wish to use this project for commercial purposes, please contact me. Developed and designed by Maciej Ślubowski.
+*This project is source-available under the [Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International](LICENSE) license (CC BY-NC-SA 4.0). You are free to share and adapt it for non-commercial purposes, as long as you give credit and release your changes under the same license. If you wish to use this project for commercial purposes, please contact me. Developed and designed by Maciej Ślubowski.*
