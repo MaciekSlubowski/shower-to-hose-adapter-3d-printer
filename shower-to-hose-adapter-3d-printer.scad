@@ -10,13 +10,15 @@ thread_clearance = 0.15;    // Thread tolerance (mm) to compensate for FDM mater
 $fn = 100;                  // High resolution for smooth arcs and cylinders
 
 // --- MATERIAL SCALING FACTORS ---
-thread_scale = 0.99;        // Scale down the thread by 1% for a perfect fit
+// v1 (0.99) only fitted the shower nut after an extra 98% scale in the slicer -> 0.99 * 0.98 = 0.97
+thread_scale = 0.97;        // Scale down the thread diameter by 3% so it fits printed at 100%
 barb_scale = 1.01;          // Scale up the hose barb by 1% for a tighter water seal
 
 // --- INTERNAL PARAMETERS (Calculated) ---
 // G 1/2" Thread (BSPP) - Scaled down, slightly longer to accommodate base reinforcement
-thread_od = (20.95 * thread_scale) - thread_clearance;
-thread_pitch = 1.814 * thread_scale;
+thread_od = (20.95 * thread_scale) - thread_clearance; // ~20.17 mm (same as the 98%-scaled v1 print that fitted)
+thread_pitch = 1.814;       // Nominal G 1/2" pitch (14 TPI) - NOT scaled, so the thread stays in step with the nut
+thread_depth = 0.98;        // Radial thread depth -> printed root diameter ~18.37 mm incl. core overlap (nut minor diameter is 18.63 mm)
 thread_length = 14;         // Increased from 12 to 14 mm to allow a 2 mm stress-relief collar
 thread_collar_height = 2.0; // Conical reinforcement at the thread root (prevents snapping)
 
@@ -50,7 +52,7 @@ difference() {
     union() {
         // 1. G 1/2" Thread (Top Section) with overlap into the handle
         translate([0, 0, barb_length_total + handle_height - 0.5])
-            simple_thread(od=thread_od, pitch=thread_pitch, length=thread_length + 0.5);
+            simple_thread(od=thread_od, pitch=thread_pitch, length=thread_length + 0.5, depth=thread_depth);
 
         // 1b. Stress-relief conical collar at the base of the G 1/2" thread
         translate([0, 0, barb_length_total + handle_height - 0.2])
@@ -147,10 +149,10 @@ module build_barb() {
     }
 }
 
-module simple_thread(od, pitch, length) {
+module simple_thread(od, pitch, length, depth) {
     r = od/2;
-    // Slightly shallower root factor (0.58 instead of 0.625) for a thicker thread core wall
-    r_core = r - (0.866 * pitch * 0.58);
+    // Root radius must stay below the nut's minor radius (9.32 mm), otherwise the nut jams on the core
+    r_core = r - depth;
     res = $fn > 0 ? $fn : 60;
     z_step = pitch/res;
     a_step = 360/res;

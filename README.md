@@ -40,7 +40,7 @@ Based on the default parameters in the OpenSCAD file, the generated adapter has 
 **v2 – Heavy-Duty Reinforced**
 * Bore reduced from 7.5 mm to 6.0 mm for thicker walls throughout, plus conical lead-ins at both ends
 * Thread length increased from 12 to 14 mm and a 2 mm conical stress-relief collar added at its base
-* Thread profile: shallower root (thicker core wall) and a larger core overlap for clean manifold geometry
+* Thread fit: diameter scale 0.99 → 0.97 (matches the 98%-scaled v1 print that fitted), nominal unscaled pitch, explicit `thread_depth`. Print at 100%.
 * Cross knob: hub 26 → 28 mm, height 10 → 12 mm, spoke base 16 → 18 mm, spokes merged deeper into the hub
 * Hose barb: larger teeth (root +0.8 mm, crest +2.2 mm over hose ID) with flat crests
 * Clamp shank lengthened (15 → 17 mm) and thickened, with two retention ribs for a worm-drive clamp
@@ -60,7 +60,8 @@ To ensure the adapter is watertight and withstands mains water pressure without 
 ## ⚠️ Note on Material Shrinkage & Assembly
 
 FDM plastics tend to shrink slightly after printing and cooling down. To compensate for this and ensure a perfect fit:
-* The OpenSCAD script independently scales down the thread by 1% (`thread_scale = 0.99`) for a smooth fit into the shower hose nut.
+* The OpenSCAD script independently scales down the thread diameter by 3% (`thread_scale = 0.97`, ~20.17 mm crest / ~18.37 mm root) for a smooth fit into the shower hose nut. This value is tested: v1 with `0.99` only fitted after an extra 98% scale in the slicer, so v2 has that correction built in. **Print it at 100% — no slicer scaling needed.**
+* The thread pitch is kept at the nominal 1.814 mm (14 TPI) and is not scaled, so the thread stays in step with the nut over its whole length.
 * The script scales up the hose barb by 1% (`barb_scale = 1.01`) to guarantee a tight, watertight seal against the flexible hose.
 
 > **Pro-Tip for Assembly:** Before sliding your hose onto the printed barb, dip the end of the hose in boiling water for 30 seconds. The heat will soften the rubber/PVC, allowing it to glide over the scaled-up teeth easily. Once it cools, it will shrink-fit tightly around the printed part. Secure it with a metal hose clamp for a permanent, leak-proof connection.
