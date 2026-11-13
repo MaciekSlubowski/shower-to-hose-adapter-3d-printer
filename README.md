@@ -20,15 +20,33 @@ Written in OpenSCAD, this parametric model features an ergonomic cross handle (f
 ## 📏 Default Dimensions
 
 Based on the default parameters in the OpenSCAD file, the generated adapter has the following specifications:
-* **Shower Thread:** G 1/2" (BSPP)
-* **Hose Barb:** Designed for a 12.5 mm (1/2") inner diameter hose
-* **Internal Bore:** 7.5 mm (Ensures thick, heavy-duty walls)
-* **Handle Type:** 4-spoke cross knob (26 mm hub, ~58 mm total span)
+* **Shower Thread:** G 1/2" (BSPP), 14 mm long (12 mm usable thread + 2 mm stress-relief collar)
+* **Hose Barb:** Designed for a 12.5 mm (1/2") inner diameter hose, 3 teeth (~13.4 → 14.9 mm)
+* **Internal Bore:** 6.0 mm with conical lead-ins at both ends (≈3.4–6.4 mm solid walls)
+* **Handle Type:** 4-spoke cross knob (28 mm hub, 12 mm thick, ~68 mm total span)
+* **Overall Height:** 58 mm
 
 ## ✨ Features
 
 * **Fully Parametric:** Easily adjust hose diameter, thread clearance, and wall thickness directly in the OpenSCAD file to fit your specific setup.
 * **Heavy-Duty Walls:** The internal bore is narrowed to create a thick, pressure-resistant structure. It will not crack or crush under the heavy tension of a metal worm-drive hose clamp.
+* **Anti-Snap Reinforcements:** A conical stress-relief collar at the root of the G 1/2" thread and a heavy-duty cone between the hose shank and the cross knob remove the sharp 90° corners where the part used to be most likely to break.
+* **Worm-Drive Clamp Zone:** A thickened smooth shank with two raised retention ribs keeps the hose from slipping out under pressure once the clamp is tightened.
+* **Durable Barb Teeth:** Enlarged teeth with a flat crest, so the tips don't print thin and brittle or shear off.
+* **Stronger Cross Knob:** A wider hub, taller handle and wider spoke roots for higher torque resistance.
+
+## 📝 Changelog
+
+**v2 – Heavy-Duty Reinforced**
+* Bore reduced from 7.5 mm to 6.0 mm for thicker walls throughout, plus conical lead-ins at both ends
+* Thread length increased from 12 to 14 mm and a 2 mm conical stress-relief collar added at its base
+* Thread profile: shallower root (thicker core wall) and a larger core overlap for clean manifold geometry
+* Cross knob: hub 26 → 28 mm, height 10 → 12 mm, spoke base 16 → 18 mm, spokes merged deeper into the hub
+* Hose barb: larger teeth (root +0.8 mm, crest +2.2 mm over hose ID) with flat crests
+* Clamp shank lengthened (15 → 17 mm) and thickened, with two retention ribs for a worm-drive clamp
+* Anti-snap cone added between the shank and the knob
+
+**v1** – Initial release: G 1/2" thread, cross knob, 3-tooth barb, smooth clamp shank.
   
 ## 🖨️ Recommended Print Settings
 
